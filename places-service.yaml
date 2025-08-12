@@ -23,13 +23,6 @@ spring:
       time-to-live: 600000
       cache-null-values: false
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-
 flyway:
   locations: classpath:db/migration
   schemas: places_schema
