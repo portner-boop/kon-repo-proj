@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/places?schema=${DB_SCHEMA:places_schema}
-    username: ${DB_USERNAME:user}
-    password: ${DB_PASSWORD:user}
+    url: jdbc:postgresql://https://10.10.146.230:${DB_PORT:5432}/places_repo?schema=places_schema
+    username: places_repo
+    password: places-repo
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -11,11 +11,11 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        default_schema: ${DB_SCHEMA:places_schema}
+        default_schema: places_schema
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   redis:
-    host: ${REDIS_HOST}
-    port: ${REDIS_PORT:6379}
+    host: 10.10.146.230
+    port: 6379
   cache:
     type: redis
     redis:
