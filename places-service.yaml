@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://https://10.10.146.230:${DB_PORT:5432}/places_repo?schema=places_schema
+    url: jdbc:postgresql://https://10.10.146.230:5432/places_repo
     username: places_repo
     password: places-repo
     driver-class-name: org.postgresql.Driver
@@ -31,6 +31,6 @@ eureka:
 
 flyway:
   locations: classpath:db/migration
-  schemas: ${DB_SCHEMA:places_schema}
+  schemas: places_schema
   baseline-on-migrate: true
 
