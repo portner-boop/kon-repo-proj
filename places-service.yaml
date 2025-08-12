@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://http://10.10.146.230:5432/places_repo
+    url: jdbc:postgresql://10.10.146.230:5432/places_repo
     username: places_repo
     password: places-repo
     driver-class-name: org.postgresql.Driver
