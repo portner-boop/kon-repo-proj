@@ -14,7 +14,7 @@ spring:
         default_schema: ${DB_SCHEMA:places_schema}
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   redis:
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST}
     port: ${REDIS_PORT:6379}
   cache:
     type: redis
