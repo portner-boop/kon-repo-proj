@@ -14,7 +14,7 @@ spring:
         default_schema: places_schema
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   redis:
-    host: 10.10.146.230
+    host: host.docker.internal
     port: 6379
     password: foobared
   cache:
