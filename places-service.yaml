@@ -15,7 +15,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   redis:
     host: 10.10.146.230
-    port: 6381
+    port: 6379
   cache:
     type: redis
     redis:
