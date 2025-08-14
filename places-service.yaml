@@ -16,6 +16,7 @@ spring:
   redis:
     host: 10.10.146.230
     port: 6379
+    password: foobared
   cache:
     type: redis
     redis:
