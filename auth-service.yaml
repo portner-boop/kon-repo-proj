@@ -32,7 +32,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://discovery-service:8671/eureka/
+      defaultZone: http://discovery-service:8761/eureka/
     healthcheck:
       enabled: true
 jwt:
@@ -47,3 +47,4 @@ flyway:
   schemas: account_schema
 
   baseline-on-migrate: true
+
