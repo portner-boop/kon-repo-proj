@@ -23,7 +23,7 @@ spring:
       hibernate:
         default_schema: profile_schema
   datasource:
-    url: jdbc:postgresql://10.10.146.230:5432/places?schema=profile_schema
+    url: jdbc:postgresql://10.10.146.230:5432/profiles?schema=profile_schema
     username: user_repo
     password: user-repo
   kafka:
@@ -55,3 +55,4 @@ app:
         - "/favicon.ico"
 
         - "/error"
+
