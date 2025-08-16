@@ -7,7 +7,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8002/eureka/
+      defaultZone: http://discovery-service:8761/eureka/
     healthcheck:
       enabled: true
 server:
@@ -44,7 +44,7 @@ flyway:
 app:
   security:
     jwt:
-      jwkSetUri: http://localhost:8006/.well-known/jwks.json
+      jwkSetUri: http://auth-service:8006/.well-known/jwks.json
       publicUrls:
         - "/v3/api-docs/**"
         - "/actuator/**"
@@ -53,4 +53,5 @@ app:
         - "/swagger-resources/**"
         - "/webjars/**"
         - "/favicon.ico"
+
         - "/error"
