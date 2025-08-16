@@ -15,7 +15,7 @@ spring:
       port: 6381
 
   datasource:
-    url: jdbc:postgresql://10.10.146.230:5432/places?schema=account_schema
+    url: jdbc:postgresql://10.10.146.230:5432/accounts?schema=account_schema
     username: auth_repo
     password: auth-repo
   kafka:
@@ -47,4 +47,5 @@ flyway:
   schemas: account_schema
 
   baseline-on-migrate: true
+
 
