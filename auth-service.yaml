@@ -11,8 +11,8 @@ spring:
         default_schema: account_schema
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: 10.10.146.230
+      port: 6381
 
   datasource:
     url: jdbc:postgresql://10.10.146.230:5432/places?schema=account_schema
@@ -32,7 +32,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8002/eureka/
+      defaultZone: http://discovery-service:8671/eureka/
     healthcheck:
       enabled: true
 jwt:
@@ -45,4 +45,5 @@ logging:
 flyway:
   locations: classpath:db/migration
   schemas: account_schema
+
   baseline-on-migrate: true
