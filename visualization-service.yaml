@@ -22,7 +22,7 @@ flyway:
   schemas: visualization_schema
   baseline-on-migrate: true
 minio:
-  url: http://localhost:9000
-  access-key: minioadmin
-  secret-key: minioadmin123
+  url: http://10.10.146.230:9000
+  access-key: minio_root
+  secret-key: minio_root_pass
   bucket: bob
