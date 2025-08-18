@@ -95,4 +95,4 @@ app:
         - "/webjars/**"
         - "/favicon.ico"
         - "/error"
-        - "api/v1/auth/**"
+        - "/api/v1/auth/**"
