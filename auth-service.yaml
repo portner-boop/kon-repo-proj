@@ -12,7 +12,7 @@ spring:
   data:
     redis:
       host: 10.10.146.230
-      port: 6379
+      port: 6381
 
   datasource:
     url: jdbc:postgresql://10.10.146.230:5432/accounts?schema=account_schema
@@ -47,6 +47,7 @@ flyway:
   schemas: account_schema
 
   baseline-on-migrate: true
+
 
 
 
