@@ -1,7 +1,7 @@
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 30
-    hostname: localhost
+    hostname: user-service
     appname: user-service
   client:
     register-with-eureka: true
@@ -42,4 +42,5 @@ flyway:
   locations: classpath:db/migration
   schemas: profile_schema
   baseline-on-migrate: true
+
 
