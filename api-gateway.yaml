@@ -7,7 +7,7 @@ spring:
         webflux:
           discovery:
             locator:
-              enabled: false
+              enabled: true
           routes:
             - id: auth-service-route
               uri: lb://auth-service
@@ -35,6 +35,13 @@ spring:
                 - Host=places.api.t1.internship.10.10.146.230.nip.io
               filters:
                 - TokenRelay
+                - DedupeResponseHeader=Access-Control-Allow-Origin
+            - id: visualization-service-route
+              uri: lb://visualization-service
+              predicates:
+                - Host=visualization.api.t1.internship.10.10.146.230.nip.io
+              filters:
+                - tokenRelay
                 - DedupeResponseHeader=Access-Control-Allow-Origin
           httpclient:
             connect-timeout: 1000
