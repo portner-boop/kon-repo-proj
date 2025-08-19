@@ -17,5 +17,17 @@ flyway:
   locations: classpath:db/migration
   schemas: order_schema
   baseline-on-migrate: true
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    hostname: localhost
+    appname: order-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    healthcheck:
+      enabled: true
 server:
   port: 8004
