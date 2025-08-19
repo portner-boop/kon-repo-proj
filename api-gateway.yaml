@@ -21,24 +21,28 @@ spring:
                 - Host=user.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
+                - name: JwtUserEmailheaderFilter
             - id: order-service-route
               uri: lb://order-service
               predicates:
                 - Host=order.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
+                - name: JwtUserEmailheaderFilter
             - id: places-service-route
               uri: lb://places-service
               predicates:
                 - Host=places.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
+                - name: JwtUserEmailheaderFilter
             - id: visualization-service-route
               uri: lb://visualization-service
               predicates:
                 - Host=visualization.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
+                - name: JwtUserEmailheaderFilter
           httpclient:
             connect-timeout: 1000
             response-timeout: 5s
