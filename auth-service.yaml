@@ -9,6 +9,7 @@ spring:
     properties:
       hibernate:
         default_schema: account_schema
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   data:
     redis:
       host: 10.10.146.230
@@ -48,6 +49,7 @@ flyway:
   schemas: account_schema
   baseline-on-migrate: true
   create_schemas: true
+
 
 
 
