@@ -56,7 +56,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery-service:8761/eureka
+      defaultZone: http://10.10.146.230:8761/eureka
     register-with-eureka: false
     fetch-registry: true
     healthcheck:
