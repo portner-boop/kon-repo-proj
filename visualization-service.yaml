@@ -21,6 +21,18 @@ flyway:
   locations: classpath:db/migration
   schemas: visualization_schema
   baseline-on-migrate: true
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    hostname: localhost
+    appname: visualization-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    healthcheck:
+      enabled: true
 minio:
   url: http://10.10.146.230:9000
   access-key: minio_root
