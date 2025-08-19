@@ -12,31 +12,31 @@ spring:
             - id: auth-service-route
               uri: lb://auth-service
               predicates:
-                - Host=auth.api.t1.internship.10.10.146.230.nip.io
+                - Host=auth.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: user-service-route
               uri: lb://user-service
               predicates:
-                - Host=user.api.t1.internship.10.10.146.230.nip.io
+                - Host=user.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: order-service-route
               uri: lb://order-service
               predicates:
-                - Host=order.api.t1.internship.10.10.146.230.nip.io
+                - Host=order.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: places-service-route
               uri: lb://places-service
               predicates:
-                - Host=places.api.t1.internship.10.10.146.230.nip.io
+                - Host=places.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: visualization-service-route
               uri: lb://visualization-service
               predicates:
-                - Host=visualization.api.t1.internship.10.10.146.230.nip.io
+                - Host=visualization.api.t1.internship.10.10.146.230.nip.io:8010
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
           httpclient:
