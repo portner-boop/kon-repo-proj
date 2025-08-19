@@ -21,20 +21,17 @@ spring:
                 - Host=user.api.t1.internship.10.10.146.230.nip.io
               filters:
                 - DedupeResponseHeader=Access-Control-Allow-Origin
-                - TokenRelay
             - id: order-service-route
               uri: lb://order-service
               predicates:
                 - Host=order.api.t1.internship.10.10.146.230.nip.io
               filters:
-                - TokenRelay
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: places-service-route
               uri: lb://places-service
               predicates:
                 - Host=places.api.t1.internship.10.10.146.230.nip.io
               filters:
-                - TokenRelay
                 - DedupeResponseHeader=Access-Control-Allow-Origin
             - id: visualization-service-route
               uri: lb://visualization-service
