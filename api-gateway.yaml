@@ -3,53 +3,51 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: true
-          routes:
-            - id: auth-service-route
-              uri: lb://auth-service
-              predicates:
-                - Path=/api/v1/auth/**
-              filters:
-                - DedupeResponseHeader=Access-Control-Allow-Origin
-            - id: user-service-route
-              uri: lb://user-service
-              predicates:
-                - Path=/api/v1/user/**, /api/v1/department/**
-              filters:
-                - DedupeResponseHeader=Access-Control-Allow-Origin
-                - name: JwtUserEmailheaderFilter
-            - id: order-service-route
-              uri: lb://order-service
-              predicates:
-                - Path=/api/v1/orders/**
-              filters:
-                - DedupeResponseHeader=Access-Control-Allow-Origin
-                - name: JwtUserEmailheaderFilter
-            - id: visualization-service-route
-              uri: lb://visualization-service
-              predicates:
-                - Path=/api/v1/floors/vis/**
-              filters:
-                - DedupeResponseHeader=Access-Control-Allow-Origin
-                - name: JwtUserEmailheaderFilter
-            - id: places-service-route
-              uri: lb://places-service
-              predicates:
-                - Path=/api/v1/locations/**, /api/v1/floors/**, /api/v1/spaces/**
-              filters:
-                - DedupeResponseHeader=Access-Control-Allow-Origin
-                - name: JwtUserEmailheaderFilter
-          httpclient:
-            connect-timeout: 1000
-            response-timeout: 5s
-            pool:
-              max-idle-time: 5s
-          metrics:
-            enabled: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: auth-service-route
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/v1/auth/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin
+        - id: user-service-route
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/user/**, /api/v1/department/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin
+            - name: JwtUserEmailheaderFilter
+        - id: order-service-route
+          uri: lb://order-service
+          predicates:
+            - Path=/api/v1/orders/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin
+            - name: JwtUserEmailheaderFilter
+        - id: visualization-service-route
+          uri: lb://visualization-service
+          predicates:
+            - Path=/api/v1/floors/vis/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin
+            - name: JwtUserEmailheaderFilter
+        - id: places-service-route
+          uri: lb://places-service
+          predicates:
+            - Path=/api/v1/locations/**, /api/v1/floors/**, /api/v1/spaces/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Origin
+            - name: JwtUserEmailheaderFilter
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 5s
+        pool:
+          max-idle-time: 5s
+      metrics:
+        enabled: true
 
 server:
   port: 8010
@@ -83,6 +81,7 @@ management:
     jmx:
       exposure:
         include: '*'
+        
 app:
   security:
     jwt:
