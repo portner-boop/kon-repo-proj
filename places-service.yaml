@@ -22,7 +22,18 @@ spring:
     redis:
       time-to-live: 600000
       cache-null-values: false
-
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    hostname: localhost
+    appname: places-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    healthcheck:
+      enabled: true
 flyway:
   locations: classpath:db/migration
   schemas: places_schema
