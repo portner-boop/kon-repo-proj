@@ -38,7 +38,6 @@ spring:
               predicates:
                 - Host=visualization.api.t1.internship.10.10.146.230.nip.io
               filters:
-                - tokenRelay
                 - DedupeResponseHeader=Access-Control-Allow-Origin
           httpclient:
             connect-timeout: 1000
