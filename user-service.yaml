@@ -14,6 +14,10 @@ server:
   port: 8003
 
 spring:
+  flyway:
+    locations: classpath:db/migration
+    schemas: profile_schema
+    baseline-on-migrate: true
   jpa:
     hibernate:
       ddl-auto: none
@@ -38,9 +42,3 @@ spring:
           json:
             trusted:
               packages: t1internship.shared.dto
-flyway:
-  locations: classpath:db/migration
-  schemas: profile_schema
-  baseline-on-migrate: true
-
-
