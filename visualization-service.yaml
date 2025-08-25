@@ -24,7 +24,7 @@ flyway:
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 30
-    hostname: localhost
+    hostname: visualization-service
     appname: visualization-service
   client:
     register-with-eureka: true
