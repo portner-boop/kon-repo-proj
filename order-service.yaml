@@ -20,7 +20,7 @@ flyway:
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 30
-    hostname: localhost
+    hostname: order-service
     appname: order-service
   client:
     register-with-eureka: true
